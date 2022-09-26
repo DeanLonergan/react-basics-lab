@@ -7,9 +7,9 @@ const Demo = () => {
     <div>
       <h1>Dynamic Languages</h1>
       <ul>
-   <li>Erlang</li>
-   <li>Clojure</li>
-</ul> 
+        <li>Erlang</li>
+        <li>Clojure</li>
+      </ul> 
     </div>
   );
 };
