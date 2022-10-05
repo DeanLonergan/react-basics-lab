@@ -1,18 +1,9 @@
 import React from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 
-const Demo = props => {
-  const list = props.modules.map((module, index) => {
-    return (
-      <tr key={index}>
-        <td>{module.name}</td>
-        <td>{module.noLectures}</td>
-        <td>{module.noPracticals}</td>
-      </tr>
-    );
-  });
+const Demo = (props) => {
   return (
-    <>
+    <div > 
       <h2>{props.course}</h2>
       <table className="table table-bordered">
         <thead>
@@ -22,10 +13,22 @@ const Demo = props => {
             <th>No practicals</th>
           </tr>
         </thead>
-        <tbody>{list}</tbody>
+        <tbody >
+        <tr>
+          <td>{props.modules[0].name}</td>
+          <td>{props.modules[0].noLectures}</td>
+          <td>{props.modules[0].noPracticals}</td>
+        </tr>
+        <tr>
+          <td>{props.modules[1].name}</td>
+          <td>{props.modules[1].noLectures}</td>
+          <td>{props.modules[1].noPracticals}</td>
+        </tr>
+      </tbody >
       </table>
-    </>
+    </div>
   );
-};
+
+}
 
 export default Demo;
